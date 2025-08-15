@@ -27,18 +27,22 @@ console.log(discountedPrice);
 const floatNumber = 12.78;
 const roundedDown = Number(Math.floor(floatNumber));
 console.log(roundedDown);
+
 // 6
 const floatString = "45.67";
 const parsedFloat = Number(parseFloat(floatString));
 console.log(parsedFloat);
+
 // 7
 const intString = "123";
 const parsedInt = Number(parseInt(intString));
 console.log(parsedInt);
+
 // 8
 const number = "9";
 const sqrtNumber = Number(Math.sqrt(number));
 console.log(sqrtNumber);
+
 // 9
 const integer = 42;
 const stringNumber = "256";
