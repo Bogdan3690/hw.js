@@ -28,11 +28,11 @@
 //     alert("Число не входить в діапазон від 10 до 20")
 // }
 
-// let user = prompt("Name");
-// let password = prompt('password');
-// let email = prompt('email').toLowerCase();
-// if (email.includes("@.") && user != "" && password != ""){
-//     alert('Перенаправлення на іншу сторінку');
-// }else{
-//     alert('Помилка: неправильне заповнення');
-// }
+let email = prompt('email');
+let name = prompt("Name");
+let password = prompt('password');
+if (email.includes("@.") && name.lenght < 3 && password.length < 6){
+    alert('Перенаправлення на іншу сторінку');
+}else{
+    alert('Помилка: неправильне заповнення');
+}
