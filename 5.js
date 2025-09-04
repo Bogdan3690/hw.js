@@ -68,5 +68,26 @@
 //         alert('wait')
 //         break
 //         default:
-//             alert('No No No')
+//             alert('not working')
+// }
+
+
+// let number1 = Number(prompt('second number').toLowerCase().trim())
+// let option = prompt('+, -, *, /').toLowerCase().trim()
+// let number2 = Number(prompt('first number').toLowerCase().trim())
+// switch(option){
+//     case "+":
+//         alert(number1 + number2)
+//         break
+//     case "-":
+//         alert(number1 - number2)
+//         break
+//     case "*":
+//         alert(number1 * number2)
+//         break
+//     case "/":
+//         alert(number1 / number2)
+//         break
+//         default:
+//             alert('not working')
 // }
