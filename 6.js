@@ -4,12 +4,9 @@
 //     i += 1
 // }
 
-// let seven = 7
-// let sum = 0
-// for (let i = 0; seven <= i; seven += 7) {
-//     sum += i
+// for (let i = 1; i <= 10; i ++) {
+//     console.log(i * 7);
 // }
-//     console.log(sum);
 
 // let n = 12
 // let i = 0
@@ -17,3 +14,9 @@
 //     i += 1 
 //     console.log(i)
 // }
+
+let number = Number(prompt('Enter a number'))
+alert(`Загальна сума чисел дорівнює ${number}`)
+if (true){
+    number
+}
