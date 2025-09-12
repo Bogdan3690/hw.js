@@ -15,8 +15,14 @@
 //     console.log(i)
 // }
 
-let number = Number(prompt('Enter a number'))
-alert(`Загальна сума чисел дорівнює ${number}`)
-do (true){
-    number
-}while
+// let total = 0
+// let number = 0
+
+// do{
+//   number = prompt("Enter #")
+//   if(number !== null){
+//     total += Number(number)
+//   }
+// }while(number !== null){
+//     alert(`Загальна сума чисел дорівнює ${total}`)
+// }
