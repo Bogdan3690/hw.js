@@ -17,6 +17,6 @@
 
 let number = Number(prompt('Enter a number'))
 alert(`Загальна сума чисел дорівнює ${number}`)
-if (true){
+do (true){
     number
-}
+}while
