@@ -1,10 +1,10 @@
-let numbers = [5, 0, 15]
-numbers[1] = 10
-console.log(numbers)
+// let numbers = [5, 0, 15]
+// numbers[1] = 10
+// console.log(numbers)
 
-let colors = ['red', 'black', 'green']
-colors[3] = 'blue'
-console.log(colors)
+// let colors = ['red', 'black', 'green']
+// colors[3] = 'blue'
+// console.log(colors)
 
 
 
@@ -23,9 +23,22 @@ console.log(colors)
 //     console.log(fiveNumbers[i])
 // }
 
-const fiveWords = ['phone', 'book', 'headphones', 'monitor', 'door'];
-for (const words of fiveWords) {
-    if(words.length > 5){
-        console.log(words)
+// const fiveWords = ['phone', 'book', 'headphones', 'monitor', 'door'];
+// for (const words of fiveWords) {
+//     if(words.length > 5){
+//         console.log(words)
+//     }
+// }
+
+let tenNumbers = [10, 15, 30, 40, 50, 10, 20, 90, 55, 45]
+// for (let i = 0; tenNumbers < i; i++) {
+//     if(tenNumbers > i){
+//         console.log(tenNumbers)
+//     }
+// }
+
+for (const number of tenNumbers) {
+    if(number / 2){
+        console.log(tenNumbers)
     }
 }
