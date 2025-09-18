@@ -6,17 +6,12 @@
 // colors[3] = 'blue'
 // console.log(colors)
 
-
-
-
-// const cart = [17, 13, 20];
+// let cart = [17, 13, 20];
 // let total = 0
 // for (let i = 0; i < cart.length; i += 1){
-//     cart[i] += cart[1, 2]
-//     console.log(cart[i])
+//     total = total + cart[i]
 // }
-
-
+// console.log(total)
 
 // const fiveNumbers = [17, 13, 20, 32, 61];
 // for (let i = 0; i < fiveNumbers.length; i += 1){
@@ -30,15 +25,17 @@
 //     }
 // }
 
-let tenNumbers = [10, 15, 30, 40, 50, 10, 20, 90, 55, 45]
-// for (let i = 0; tenNumbers < i; i++) {
-//     if(tenNumbers > i){
-//         console.log(tenNumbers)
+// let tenNumbers = [10, 15, 30, 23, 50, 11, 27, 90, 55, 45]
+// for (let i = 0; i < tenNumbers.length; i++) {
+//     if(tenNumbers[i] % 2 === 0){
+//         console.log(tenNumbers[i])
 //     }
 // }
 
-for (const number of tenNumbers) {
-    if(number / 2){
-        console.log(tenNumbers)
-    }
-}
+// let max = tenNumbers[0]
+// for (let i = 0; i < tenNumbers.length; i++) {
+//     if(tenNumbers[i] > max){
+//         max = tenNumbers[i]
+//     }
+// }
+//         console.log(max)
