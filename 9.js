@@ -1,15 +1,21 @@
-// let array = ['Poly', 'Ajax', 'Bob']
-// const logItems = function(number, array) {
-//     for (let i = 0; i < array.length; i++) {
-//         let numberOfElement = array.indexOf[1]
-//     }
-//     console.log(number)
-// }
-// logItems(numberOfElement, array)
+let array = ['Poly', 'Ajax', 'Bob']
+const logItems = function(array){
+  for (let i = 0; i < array.length; i++) {
+    console.log(`${i + 1} - ${array[i]}`)
+  }
+}
+    // logItems(array)   5
 
-// function calculateEngravingPrice(message, pricePerWord) {
-    
-// }
+// Напиши скрипт підрахунку вартості гравіювання прикрас. 
+// Для цього створи функцію calculateEngravingPrice(message, pricePerWord) приймаючу рядок 
+//  і ціну гравіювання одного слова, і повертає ціну гравіювання всіх слів в рядку.
+
+function calculateEngravingPrice(message, pricePerWord){
+  for (let i = 0; i < message.length; i++) {
+     pricePerWord += message[i]
+  }
+}
+console.log(calculateEngravingPrice("Sorry! We are out of stock!", 4))
 
 // telegram problems
 
