@@ -33,6 +33,12 @@ const countProps = function (obj) {
 //  більше всіх задач). Співробітники і кількість виконаних завдань 
 // містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
 const findBestEmployee = function (employees) {
+  bestOne
+  for (const employee of employees) {
+    for (let i = 0; i < employee.length; i++) {
+      bestOne = employee[i]
+    }
+  }
    return Math.max(Object.values)
 };
 console.log(
@@ -82,7 +88,12 @@ const products = [
 ];
 
 const getAllPropValues = function (arr, prop) {
-    return 
+  let allProducts = []
+  for (const product of arr) {
+    let productName = product.prop
+    allProducts.push(productName)
+  }
+  return allProducts
 };
 
 console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
@@ -91,11 +102,18 @@ console.log(getAllPropValues(products, 'category')); // []
 
 
 // Завдання 6
-// Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).
+// Напиши функцію calculateTotalPrice(allProdcuts, productName),
+//  яка отримує масив об'єктів та ім'я продукту (значення властивості name). 
+// Повертає загальну вартість продукту (ціна * кількість).
 // Викличи функції для перевірки працездатності твоєї реалізації.
-// const calculateTotalPrice = function (allProdcuts, productName) {
-//   // твій код
-// };
+const calculateTotalPrice = function (allProducts, productName) {
+  for (const product of productName) {
+    let totalPrice = product.price * product.quantity
+    console.log(product.price);
+    
+  }
+  return totalPrice
+};
 
-// console.log(calculateTotalPrice(products, 'Радар')); // 5200
+console.log(calculateTotalPrice(products, 'Радар')); // 5200
 // console.log(calculateTotalPrice(products, 'Дроїд')); // 2800
