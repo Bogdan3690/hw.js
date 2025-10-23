@@ -3,20 +3,41 @@
 // - додає поле mood зі значенням 'happy'
 // - замінює значення hobby на 'skydiving'
 // - замінює значення premium на false
-// - виводить вміст об'єкта user в форматі ключ:значення -використовуючи Object.keys() і for...of
+// - виводить вміст об'єкта user в форматі ключ:значення -використовуючи Object.keys()
+//  і for...of
 const user = {
   name: 'Mango',
   age: 20,
   hobby: 'html',
   premium: true,
-  addCharacteristics(objectToChange){
-    this.mood = 'happy'
-    this.hobby = 'skydiving'
-    this.premium = false
+  addCharact(newKey){
+  this.mood = newKey
+},
+  changeCharact(newCharact){
+  this.hobby = newCharact
+},
+  changeSecondCharact(newSecondCharact){
+  this.premium = newSecondCharact
+}
   }
-};
-// addCharacteristics(user)
+  const display = function(objectToDisplay){
+    let newObject = []
+    let objKeys = Object.keys(objectToDisplay)
 
+    for (const key of objKeys) {
+      console.log(`${key}:${objectToDisplay[key]}`)
+      newObject.push(key, objectToDisplay[key])
+    }
+    return newObject
+  }
+  user.addCharact('happy')
+  user.changeCharact('skydiving')
+  user.changeSecondCharact('happy')
+  display(user)
+  
+  // const {hobby = 'skydiving'} = user
+  // console.log(user);
+  
 // Завдання 2
 // Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.
 
@@ -32,31 +53,30 @@ const countProps = function (obj) {
 //  співробітників і повертає ім'я найпродуктивнішого (який виконав
 //  більше всіх задач). Співробітники і кількість виконаних завдань 
 // містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
-const findBestEmployee = function (employees) {
-  bestOne
-  for (const employee of employees) {
-    for (let i = 0; i < employee.length; i++) {
-      bestOne = employee[i]
-    }
-  }
-   return Math.max(Object.values)
-};
-console.log(
-  findBestEmployee({
-    ann: 29,
-    david: 35,
-    helen: 1,
-    lorence: 99,
-  }),
-); // lorence
+// const findBestEmployee = function (employees) {
+//   for (const employee of employees) {
+//     for (let i = 0; i < employee.length; i++) {
+//       bestOne = employee[i]
+//     }
+//   }
+//    return Math.max(Object.values)
+// };
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99,
+//   }),
+// ); // lorence
 
-console.log(
-  findBestEmployee({
-    poly: 12,
-    mango: 17,
-    ajax: 4,
-  }),
-); // mango
+// console.log(
+//   findBestEmployee({
+//     poly: 12,
+//     mango: 17,
+//     ajax: 4,
+//   }),
+// ); // mango
 
 // Завдання 4
 // Напиши функцію countTotalSalary(employees) приймаючу об'єкт зарплат.
@@ -115,5 +135,5 @@ const calculateTotalPrice = function (allProducts, productName) {
   return totalPrice
 };
 
-console.log(calculateTotalPrice(products, 'Радар')); // 5200
+// console.log(calculateTotalPrice(products, 'Радар')); // 5200
 // console.log(calculateTotalPrice(products, 'Дроїд')); // 2800
