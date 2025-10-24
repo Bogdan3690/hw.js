@@ -35,14 +35,11 @@ const user = {
   user.changeSecondCharact('happy')
   display(user)
   
-  // const {hobby = 'skydiving'} = user
-  // console.log(user);
-  
 // Завдання 2
-// Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.
-
+// Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. 
+// Функція повертає число — кількість властивостей.
 const countProps = function (obj) {
-    // return this.Object.keys(obj)
+    return Object.keys(obj).length
 };
 // console.log(countProps({})); // 0
 // console.log(countProps({ name: 'Mango', age: 2 })); // 2
@@ -53,13 +50,17 @@ const countProps = function (obj) {
 //  співробітників і повертає ім'я найпродуктивнішого (який виконав
 //  більше всіх задач). Співробітники і кількість виконаних завдань 
 // містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
-// const findBestEmployee = function (employees) {
-//   for (const employee of employees) {
+// const findBestEmployee = function (obj) {
+//   // 1 make masive values
+//   // 2 make max values of obj
+//   // 3 for for masive use Object.entrees
+//   let arr = Math.max(Object.values(obj))
+//   for (const employee of arr) {
 //     for (let i = 0; i < employee.length; i++) {
-//       bestOne = employee[i]
+//       bestOne = O
 //     }
 //   }
-//    return Math.max(Object.values)
+//    return arr
 // };
 // console.log(
 //   findBestEmployee({
@@ -83,18 +84,21 @@ const countProps = function (obj) {
 //  Функція рахує загальну суму зарплати працівників і повертає її.
 //  Кожне поле об'єкта, переданого в функцію, має вигляд "ім'я":"зарплата".
 const countTotalSalary = function (employees) {
-    // for (const employee of employees) {
-        
-    // }
+  // 1 get masive of value
+  // 2 get vallue and add to total
+  let total = 0
+    const arr = Object.values(employees)
+    for (const value of arr) {
+    }
 };
-console.log(countTotalSalary({})); // 0
-console.log(
-  countTotalSalary({
-    mango: 100,
-    poly: 150,
-    alfred: 80,
-  }),
-); // 330
+// console.log(countTotalSalary({})); // 0
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
 
 // Завдання 5
 // Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів
@@ -110,8 +114,7 @@ const products = [
 const getAllPropValues = function (arr, prop) {
   let allProducts = []
   for (const product of arr) {
-    let productName = product.prop
-    allProducts.push(productName)
+    allProducts.push(product[prop])
   }
   return allProducts
 };
@@ -125,14 +128,14 @@ console.log(getAllPropValues(products, 'category')); // []
 // Напиши функцію calculateTotalPrice(allProdcuts, productName),
 //  яка отримує масив об'єктів та ім'я продукту (значення властивості name). 
 // Повертає загальну вартість продукту (ціна * кількість).
-// Викличи функції для перевірки працездатності твоєї реалізації.
 const calculateTotalPrice = function (allProducts, productName) {
-  for (const product of productName) {
-    let totalPrice = product.price * product.quantity
-    console.log(product.price);
-    
+  for (const product of allProducts) {
+    let cost = product.price * product.quantity
+    let nameOfProduct = product.name
+    if (nameOfProduct === productName) {
+      return cost
+    }
   }
-  return totalPrice
 };
 
 // console.log(calculateTotalPrice(products, 'Радар')); // 5200
