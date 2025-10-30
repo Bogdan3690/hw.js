@@ -26,7 +26,11 @@ const account = {
    * Приймає суму і тип транзакції.
    */
   createTransaction(amount, type) {
-    
+    return {
+      id: this.transactions.length + 1,
+      type,
+      amount,
+    }
   },
   /*
    * Метод відповідає за додавання суми до балансу.
@@ -35,10 +39,9 @@ const account = {
    * після чого додає його в історію транзакцій
    */
   deposit(amount) {
-    let myDeposit = this.balance + amount
-    console.log(myDeposit);
-    let myTransations = this.transactions.push(myDeposit)
-    console.log(myTransations);
+    this.balance += amount
+    let transaction = this.createTransaction(amount, Transaction.DEPOSIT)
+    this.transactions.push(transaction)
   },
   /*
    * Метод відповідає за зняття суми з балансу.
@@ -50,29 +53,49 @@ const account = {
    * про те, що зняття такої суми не можливо, недостатньо коштів.*/
   withdraw(amount) {
     if (amount > this.balance) {
-        alert('Not enough money')
+        console.log('Not enough money');
+    }else{
+      this.balance = this.balance - amount
+      let transaction = this.createTransaction(amount, Transaction.WITHDRAW)
+      this.transactions.push(transaction)
     }
   },
   /*
    * Метод повертає поточний баланс*/
   getBalance() {
-    this.balance
+    return this.balance
   },
+  // HISTORY OF TRANSACTIONS
   /*
    * Метод шукає і повертає об'єкт транзакції по id*/
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    for (const oneTran of this.transactions){
+      if (oneTran.id === id) {
+        return oneTran
+      }
+    }
+    return 'Transaction not found'
+  },
   /*
-   * Метод повертає кількість коштів
-   * певного типу транзакції з усієї історії транзакцій*/
-  getTransactionTotal(type) {},
+   * Метод повертає кількість коштів певного типу транзакції з усієї історії транзакцій*/
+  getTransactionTotal(type) {
+    let total = 0
+    for (const oneTran of this.transactions){
+      if (oneTran.type === type) {
+        total += oneTran.amount
+      }
+    }
+    return total
+  },
 };
 
-// console.log(account.getBalance());
+console.log(account.getBalance());
 account.deposit(100);
 console.log(account.getBalance());
-// account.deposit(10);
-// console.log(account.getBalance());
-// account.withdraw(20);
-// console.log(account.getBalance());
-// account.withdraw(40);
-// console.log(account.getBalance());
+account.deposit(10);
+console.log(account.getBalance());
+account.withdraw(20);
+console.log(account.getBalance());
+account.withdraw(40);
+console.log(account.getBalance());
+console.log(account.transactions);
