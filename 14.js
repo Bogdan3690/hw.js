@@ -165,18 +165,16 @@ console.log(getUserNames);
 
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 const getUsersWithEyeColor = (users, color) => {
-    users.filter(user => user.eyeColor)
+  return users.filter(user => user.eyeColor === color)
 };
 console.log(getUsersWithEyeColor(users, "blue")); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 
 // Завдання 3
 
 // Отримати масив імен користувачів за статтю (поле gender)
-
 const getUsersWithGender = (users, gender) => {
-  // твій код
+  return users.filter(user => user.gender === gender).map(user => user.name)
 };
-
 console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 // Завдання 4
@@ -189,7 +187,7 @@ console.log(getInactiveUsers); // [об'єкт Moore Hensley, об'єкт Ross V
 
 // Отримати користувача (не масив) по email (поле email, він унікальний).
 const getUserWithEmail = (users, email) => {
-  // твій код
+  return users.find(user => user.email === email).name
 };
 console.log(getUserWithEmail(users, "shereeanthony@kog.com")); // {об'єкт користувача Sheree Anthony}
 console.log(getUserWithEmail(users, "elmahead@omatom.com")); // {об'єкт користувача Elma Head}
@@ -205,7 +203,7 @@ console.log(calculateTotalBalance(users)); // 20916
 // Масив імен (поле name) людей, відсортованих в залежності від кількості їх друзів (поле friends)
 
 const getNamesSortedByFriendsCount = (users) => {
-users.toSorted(user => user.friend)
+users.toSorted(user => user.friend)   .map(user => user.name)
 };
 console.log(getNamesSortedByFriendsCount(users));
 // // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson',
