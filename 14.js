@@ -203,8 +203,26 @@ console.log(calculateTotalBalance(users)); // 20916
 // Масив імен (поле name) людей, відсортованих в залежності від кількості їх друзів (поле friends)
 
 const getNamesSortedByFriendsCount = (users) => {
-users.toSorted(user => user.friend)   .map(user => user.name)
+return users.toSorted((a,b) => a.friends.length - b.friends.length)
+.map(user => user.name)
 };
 console.log(getNamesSortedByFriendsCount(users));
 // // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson',
 //  'Sheree Anthony', 'Ross Vazquez' ]
+
+//*
+
+// завдання з зірочкою
+ // Перетворіть масив об'єктів у об'єкт,
+// де ключами будуть властивості name,
+// а значеннями - відповідні значення властивості value:
+const arr2 = [
+  { name: 'apple', value: 2 },
+  { name: 'banana', value: 3 },
+  { name: 'orange', value: 4 },
+].reduce((acc, item) => {
+  acc[item.name] = item.value
+  return acc
+}, {})
+console.log(arr2);
+ // {apple: 2, banana: 3, orange: 4}
